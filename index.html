@@ -1,0 +1,156 @@
+
+<style>
+  .bizitza-contact {
+    max-width: 680px;
+    margin: 40px auto;
+    padding: 36px;
+    background: #f5f0e8;
+    border: 1px solid #e5dacb;
+    border-radius: 20px;
+    box-shadow: 0 8px 28px rgba(65, 54, 42, 0.08);
+    color: #45483d;
+    font-family: Arial, sans-serif;
+  }
+
+  .bizitza-contact h2 {
+    margin: 0 0 12px;
+    color: #596b55;
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .bizitza-contact .intro {
+    margin-bottom: 28px;
+    text-align: center;
+    line-height: 1.7;
+  }
+
+  .bizitza-contact .field {
+    margin-bottom: 20px;
+  }
+
+  .bizitza-contact label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  .bizitza-contact input:not([type="checkbox"]),
+  .bizitza-contact textarea {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #d5cbbd;
+    border-radius: 9px;
+    background: #fffdf9;
+    color: #45483d;
+    font: inherit;
+  }
+
+  .bizitza-contact textarea {
+    min-height: 150px;
+    resize: vertical;
+  }
+
+  .bizitza-contact input:focus,
+  .bizitza-contact textarea:focus {
+    outline: 2px solid #9aaa8d;
+    outline-offset: 2px;
+  }
+
+  .bizitza-contact .consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-weight: normal;
+    line-height: 1.6;
+  }
+
+  .bizitza-contact .consent input {
+    margin-top: 5px;
+  }
+
+  .bizitza-contact a {
+    color: #596b55;
+    text-decoration: underline;
+  }
+
+  .bizitza-contact button {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    border: 0;
+    border-radius: 30px;
+    background: #71836a;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  .bizitza-contact button:hover {
+    background: #596b55;
+  }
+
+  @media (max-width: 600px) {
+    .bizitza-contact {
+      margin: 20px 12px;
+      padding: 24px 18px;
+    }
+  }
+</style>
+
+<section class="bizitza-contact">
+  <h2>Entra em contacto</h2>
+  <p class="intro">
+    Será um prazer receber a tua mensagem.
+    Estou aqui para te ouvir.
+  </p>
+
+  <form action="https://formspree.io/f/mjygjywq" method="POST">
+    <div class="field">
+      <label for="biz-nome">Nome *</label>
+      <input id="biz-nome" name="nome" type="text"
+             autocomplete="name" required>
+    </div>
+
+    <div class="field">
+      <label for="biz-email">E-mail *</label>
+      <input id="biz-email" name="email" type="email"
+             autocomplete="email" required>
+    </div>
+
+    <div class="field">
+      <label for="biz-telefone">Telemóvel</label>
+      <input id="biz-telefone" name="telemovel" type="tel"
+             autocomplete="tel">
+    </div>
+
+    <div class="field">
+      <label for="biz-mensagem">A tua mensagem *</label>
+      <textarea id="biz-mensagem" name="mensagem"
+                placeholder="Escreve aqui a tua mensagem..."
+                required></textarea>
+    </div>
+
+    <div class="field">
+      <label class="consent">
+        <input type="checkbox" name="consentimento_privacidade"
+               value="Aceito" required>
+        <span>
+          Li e aceito a
+          <a href="politica-privacidade.html">
+            Política de Privacidade
+          </a>.
+        </span>
+      </label>
+    </div>
+
+    <input type="hidden" name="_subject"
+           value="Nova mensagem - Bizitza Núcleo do Ser">
+
+    <button type="submit">Enviar mensagem</button>
+  </form>
+</section>
